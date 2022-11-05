@@ -1,0 +1,20 @@
+<p>list-produits works!</p>
+<div class="borderr">
+    <ng-container *ngIf="listProduits.length">
+        <li *ngFor="let produit of listProduits; let i = index">
+            <tr> <li> Produit: {{produit.idProduit}} <button> QQ <div *ngIf="produit.prixUnitaire==20"></div></button> </li> </tr>
+            <tr> <li> Code: {{produit.code}}</li> </tr>
+            <tr><li> Libelle :{{produit.libelle}}</li></tr>
+            <tr><li>Prix Unitaire: {{produit.prixUnitaire}}</li></tr>
+
+        </li>
+      </ng-container>
+      <li *ngFor="let u of  productS.getAllproducts();"> 
+        <tr> <li>{{u.idProduct}} <button> Calculer</button></li></tr> 
+            <tr> <li>{{u.code}}</li></tr>
+                <tr> <li> {{u.libelle}}</li></tr>
+                    <tr> <li>{{u.prixunitaire}}</li></tr>
+                        <tr> <li> {{u.tauxTva}}</li></tr>
+
+    </li>
+</div>
